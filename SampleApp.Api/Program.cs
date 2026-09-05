@@ -102,7 +102,7 @@ builder.Services.AddRateLimiter(options =>
     options.AddSlidingWindowLimiter("sliding", opt =>
     {
         opt.Window = TimeSpan.FromMinutes(2);
-        opt.PermitLimit = 20;
+        opt.PermitLimit = 25;
         opt.SegmentsPerWindow = 4;  // Divides into 4 rolling segments (every 30 seconds)
     });
 
